@@ -1,0 +1,9 @@
+pytest
+flake8
+flask
+python-dateutil
+pymysql
+flask-table
+flask-mysql
+coverage
+mysql-connector
