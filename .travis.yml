@@ -1,0 +1,18 @@
+language: python
+install:
+  - pip install -r requirements.txt
+# SonarQube 
+addons:
+  sonarcloud:
+    organization: "shashank-ssriva-github"
+
+# commands to run tests & sonar scan
+script:
+# unit test
+  - python -m pytest -v tests/*
+# linting test
+  - flake8 --ignore=E501,F401,F821
+# code coverage test  
+  - coverage report -m app.py
+# sonar scanner
+  - sonar-scanner
